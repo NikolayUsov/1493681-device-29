@@ -1,0 +1,75 @@
+@font-face{
+  font-family: Gillory;
+  font-weight: normal;
+  font-style: normal;
+  src: local('Gillory'),
+       url(../fonts/gilroylight.woff),
+       url(../fonts/gilroylight.woff2);
+  font-display: swap;
+}
+@font-face{
+  font-family: Gillory;
+  font-weight: bold;
+  font-style: normal;
+  src: local('Gillory'),
+       url(../fonts/gilroyextrabold.woff),
+       url(../fonts/gilroyextrabold.woff2);
+  font-display: swap;
+}
+:root{
+  --basic-black: #000000;
+  --basic-yellow: #F7E296;
+}
+
+.page-body {
+  font-family: 'Open Sans',Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  margin: 0;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+h1,h2,h3,h4{
+  font-family: 'Gillory',Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.page {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.double-column{
+  display: grid;
+  grid-template-columns: repeat(2,580px);
+  column-gap: 40px;
+}
