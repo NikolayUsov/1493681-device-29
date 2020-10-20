@@ -18,9 +18,9 @@
             <button type="submit">Найти</button>
           </form>
           <ul class="user-nav">
-            <li class="user-nav-item log-in"><a>Войти</a></li>
-            <li class="user-nav-item compare"><a>Сравнить</a></li>
-            <li class="user-nav-item cart"><a>Корзина</a></li>
+            <li class="user-nav-item"><a class="log-in" href="#">Войти</a></li>
+            <li class="user-nav-item"><a class="compare" href="#">Сравнить</a></li>
+            <li class="user-nav-item"><a a class="cart" href="#">Корзина</a></li>
           </ul>
         </nav>
         <nav class="main-nav double-column">
@@ -33,9 +33,9 @@
                   Камеры и виртуальная реальность
                 </h4>
                 <ul class="header-product-sub-menu">
-                  <li class="header-product-sub-menu-item">Виртуальная реальность</li>
-                  <li class="header-product-sub-menu-item">Моноподы для селфи</li>
-                  <li class="header-product-sub-menu-item">Экшн-камеры</li>
+                  <li class="header-product-sub-menu-item"><a href="#">Виртуальная реальность</a></li>
+                  <li class="header-product-sub-menu-item"><a href="#">Моноподы для селфи</a></li>
+                  <li class="header-product-sub-menu-item"><a href="#">Экшн-камеры</a></li>
                 </ul>
               </li>
               <li class="header-product-menu-category">
@@ -43,8 +43,8 @@
                   Акссесуары
                 </h4>
                 <ul class="header-product-sub-menu">
-                  <li class="header-product-sub-menu-item">Фитнес-браслеты</li>
-                  <li class="header-product-sub-menu-item">Умные часы</li>
+                  <li class="header-product-sub-menu-item"><a href="#">Фитнес-браслеты</a></li>
+                  <li class="header-product-sub-menu-item"><a href="#">Умные часы</a></li>
                 </ul>
               </li>
               <li class="header-product-menu-category">
@@ -52,21 +52,20 @@
                   Дроны и Квадрокоптеры
                 </h4>
                 <ul class="header-product-sub-menu">
-                  <li class="header-product-sub-menu-item">Квадрокоптер</li>
+                  <li class="header-product-sub-menu-item"><a href="#">Квадрокоптер</a></li>
                 </ul>
               </li>
-
             </ul>
           </div>
           <ul class="our-servises">
             <li class="our-servises-item">
-              <h3 class="subtitle"><a href="#">Доставка</a></h3>
+              <p class="subtitle"><a href="#">Доставка</a></p>
             </li>
             <li class="our-servises-item">
-              <h3 class="subtitle"><a href="#">гарантия</a></h3>
+              <p class="subtitle"><a href="#">гарантия</a></p>
             </li>
             <li class="our-servises-item">
-              <h3 class="subtitle"><a href="#">контакты</a></h3>
+              <p class="subtitle"><a href="#">контакты</a></p>
             </li>
           </ul>
         </nav>
@@ -138,48 +137,42 @@
           </li>
         </ul>
       </section>
-      <section class="services">
+      <section class="services-section">
         <div class="wrapper">
-          <h2 class="visually-hiden">Наши услуги</h2>
+          <h2 class="visually-hidden">Наши услуги</h2>
           <dl class="services-describe">
-            <dt>
+            <dt class="name-of-service active-service">
               <a class="btn">доставка</a>
             </dt>
-            <dd>
+            <dd class="service delivery">
               <h2 class="services-describe-title">Доставка</h2>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему
                 подъезду совершенно бесплатно! Ведь мы неплохо
                 заработаем, поднимая его на ваш этаж.</p>
             </dd>
-          </dl>
-          <dl class="services-describe">
-            <dt>
+            <dt class="name-of-service">
               <a class="btn">Гарантия</a>
             </dt>
-            <dd>
+            <dd class="service warrenty">
               <h2 class="services-describe-title"> Гарантия</h2>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом —
                 не переживайте, мы выдадим вам новый.
                 Товар, не дом, конечно же.</p>
             </dd>
-          </dl>
-          <dl class="services-describe">
-            <dt>
+            <dt class="name-of-service">
               <a class="btn">Кредит</a>
             </dt>
-            <dd>
+            <dd class="service credit">
               <h2 class="services-describe-title">Кредит</h2>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты
                 подберут для вас наиболее выгодные
                 условия кредита. Выгодные для нашего банка, разумеется.</p>
             </dd>
           </dl>
-        </div>
-
 
       </section>
       <section class="logo-our-brands wrapper">
-        <h2 class="visually-hiden">Наши бренды</h2>
+        <h2 class="visually-hidden">Наши бренды</h2>
         <ul class="our-brands-list">
           <li class="our-brands-item">
             <img src="img/barand-logo-dji.png" width="260" height="100" alt="Логотип нашего бренда">
@@ -207,7 +200,7 @@
             <ul class="logistic-company-list">
               <li class="logistic-company-item">Деловые линии</li>
               <li class="logistic-company-item">Автотрейдинг</li>
-              <li class="logistic-company-item">ЖелДорЭкспедиция</li>
+              <li class="logistic-company-item">ЖелДор Экспедиция</li>
             </ul>
             <a href="#" class="btn">подробнее о нас</a>
        </article>
@@ -220,7 +213,7 @@
       </article>
       </section>
     </main>
-    <footer>
+    <footer class="main-footer">
       <div class="wrapper">
         <div class="left-column">
           <a href="#" class="footer-logo">
