@@ -1,18 +1,18 @@
 @font-face {
-  font-family: Gillory;
+  font-family: Gilroy;
   font-weight: normal;
   font-style: normal;
-  src: local('Gillory'),
+  src: local('Gilroy'),
     url(../fonts/gilroylight.woff),
     url(../fonts/gilroylight.woff2);
   font-display: swap;
 }
 
 @font-face {
-  font-family: Gillory;
+  font-family: Gilroy;
   font-weight: bold;
   font-style: normal;
-  src: local('Gillory'),
+  src: local('Gilroy'),
     url(../fonts/gilroyextrabold.woff),
     url(../fonts/gilroyextrabold.woff2);
   font-display: swap;
@@ -43,14 +43,6 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Gillory', Verdana, sans-serif;
-  font-weight: bold;
 }
 
 .page {
@@ -93,7 +85,7 @@ img {
 
 .btn {
   display: inline-flex;
-  font-family: 'Gillory', Verdana, sans-serif;
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -167,8 +159,9 @@ a:not([href^="http://"]):not([href^="https://"]) {
   margin-bottom: 50px;
 }
 
-.subtitle {
-  font-family: 'Gillory', Verdana, sans-serif;
+.subtitle,
+.main-nav-list-item {
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -177,51 +170,70 @@ a:not([href^="http://"]):not([href^="https://"]) {
   text-transform: uppercase;
   margin: 0;
 }
-.subtitle a{
-  font: inherit;
-  color: inherit;
-}
 
-.subtitle a:hover,
-.subtitle a:focus{
+.main-nav-list-item a:hover,
+.main-nav-list-item a:focus{
   opacity: 0.6;
 }
 
-.subtitle a:active{
+.main-nav-list-item a:active{
   opacity: 0.3;
 }
-.our-servises {
-  margin: 0;
+.main-nav-list{
   padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  position: relative;
 }
-
-.our-servises a {
-  font: inherit;
-  color: inherit;
-}
-
-.our-servises-item:not(:last-child) {
+.main-nav-list-item:not(:first-child):not(:last-child){
   margin-right: 38px;
 }
-
-.our-servises-item:last-child {
+.main-nav-list-item:first-child{
+  margin-right: 324px;
+}
+.main-nav-list-item:last-child{
   margin-left: auto;
 }
 
-.header-products:hover .header-product-menu{
-  visibility: visible;
+ .main-nav-list-item a:hover + .sub-menu,
+ .sub-menu:hover{
+  display: block;
+ }
+
+
+.sub-menu {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-transform: none;
+  width:  100%;
+  background-color: var(--basic-yellow);
+  padding-top: 24px;
+  display: none;
+  position: absolute;
+  top: 17px;
+  left: 0;
+  z-index: 2;
 }
 
-.header-product-menu {
+.sub-menu-list{
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  gap: 20px 60px;
+  list-style: none;
   padding: 0;
   margin: 0;
-  padding-top: 18px;
-  padding-bottom: 46px;
-  list-style: none;
-  visibility: hidden;
+}
+
+.sub-menu-item:last-child{
+  grid-column: 3/4;
 }
 
 .header-product-menu .header-product-sub-menu {
@@ -235,19 +247,6 @@ a:not([href^="http://"]):not([href^="https://"]) {
   justify-content: space-between;
 }
 
-.header-product-menu-category:not(:last-child) {
-  margin-right: 86px;
-}
-
-.header-product-sub-menu-item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.header-product-sub-menu-item a {
-  font: inherit;
-  color: inherit;
-}
-
 /* promo*/
 .promo {
   background: linear-gradient(to bottom,
@@ -256,7 +255,7 @@ a:not([href^="http://"]):not([href^="https://"]) {
 }
 
 .promo-title {
-  font-family: 'Gillory', Verdana, sans-serif;
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -281,7 +280,7 @@ a:not([href^="http://"]):not([href^="https://"]) {
 
 .promo-specifications-table th,
 .promo-specifications-table td {
-  font-family: 'Gillory', Verdana, sans-serif;
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
@@ -304,7 +303,7 @@ a:not([href^="http://"]):not([href^="https://"]) {
 .promo-text-slider-1::after{
   content: "01";
   position: absolute;
-  font-family: 'Gillory', Verdana, sans-serif;
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 179px;
@@ -362,7 +361,7 @@ a:not([href^="http://"]):not([href^="https://"]) {
 }
 
 .popular-products-title {
-  font-family: 'Gillory', Verdana, sans-serif;
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -422,7 +421,7 @@ a:not([href^="http://"]):not([href^="https://"]) {
 }
 
 .services-describe-title {
-  font-family: 'Gillory', Verdana, sans-serif;
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -471,7 +470,7 @@ a:not([href^="http://"]):not([href^="https://"]) {
 /*company-info*/
 .about-us-title,
 .our-contacts-title {
-  font-family: 'Gillory', Verdana, sans-serif;
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -497,7 +496,7 @@ a:not([href^="http://"]):not([href^="https://"]) {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: 'Gillory', Verdana, sans-serif;
+  font-family: 'Gilroy', Verdana, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
