@@ -96,11 +96,16 @@ img {
   color: var(--basic-black);
   display: inline-block;
   text-align: center;
-  padding: 9px 43px;
   position: relative;
   z-index: 1;
 }
-
+.promo .btn{
+  padding: 9px 43px;
+}
+.services-describe .btn{
+  width: 100%;
+  padding: 9px 0;
+}
 .btn::before{
   content: "";
   display: block;
@@ -126,7 +131,7 @@ img {
 
 a:not([href^="http://"]):not([href^="https://"]) {
   text-decoration: none;
-  
+
 }
 
 /* header */
@@ -278,6 +283,9 @@ a:not([href^="http://"]):not([href^="https://"]) {
   justify-content: space-between;
 }
 
+.index-main{
+  padding-bottom: 86px;
+}
 /* promo*/
 .promo {
   background: linear-gradient(to bottom,
@@ -403,20 +411,33 @@ a:not([href^="http://"]):not([href^="https://"]) {
 
 /*services*/
 .services-section {
-  background-color: var(--basic-grey);
-  margin-bottom: 90px;
+  background: linear-gradient(to bottom,
+  var(--basic-white) 29%,
+  var(--basic-grey) 29% 100%);
+  padding-bottom: 20px;
 }
 
 .services-describe {
   display: grid;
   grid-template-columns: 277px 1fr;
+  grid-template-rows: minmax(320px, auto);
   column-gap: 116px;
   margin: 0;
 }
 
 .name-of-service {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   grid-column-start: 1;
   grid-column-end: 2;
+  border-right: 7px solid var(--basic-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name-of-service-item{
+  width: 160px;
 }
 
 .service {
@@ -426,10 +447,15 @@ a:not([href^="http://"]):not([href^="https://"]) {
   grid-row-end: 2;
   padding: 0;
   margin: 0;
-  visibility: hidden;
+  display: none;
   position: relative;
 }
 
+.service.current-service{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .service::before {
   position: absolute;
   content: "";
@@ -441,14 +467,9 @@ a:not([href^="http://"]):not([href^="https://"]) {
 }
 
 .service.delivery:before {
-  top: 0;
+  top: center;
   right: 0;
   background-image: url(../img/delivery.svg);
-}
-
-
-.active-service+.service {
-  visibility: visible;
 }
 
 .services-describe-title {
@@ -555,10 +576,20 @@ a:not([href^="http://"]):not([href^="https://"]) {
 
 .about-us,
 .our-contacts{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
   min-height: 560px;
   padding-top: 50px;
 
+}
+
+.about-us .btn,
+.our-contacts .btn{
+  margin-top: auto;
+  margin-bottom: 5px;
+  padding: 9px 18px 9px 24px;
 }
 
 .about-us::before,
@@ -573,8 +604,13 @@ a:not([href^="http://"]):not([href^="https://"]) {
 }
 
 
-/*footer*/
 
+
+
+/*footer*/
+.main-footer{
+  padding: 46px 0;
+}
 .main-footer{
   background-color: var(--basick-dark);
   color:  var(--basic-white);
@@ -587,4 +623,77 @@ a:not([href^="http://"]):not([href^="https://"]) {
 .main-footer a{
   color: inherit;
   font: inherit;
+}
+.footer-user-nav{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ .footer-user-nav-item:not(:last-child){
+  margin-right: 63px;
+}
+.footer-logo{
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.footer-nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 67px;
+}
+.adress{
+  margin: 0;
+  margin-right: 15px;
+}
+
+.our-servises{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+}
+
+.our-servises-item:not(:last-child){
+  margin-right: 36px;
+}
+
+.footer-social{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-links{
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.social-link-item:not(:last-child){
+  margin-right: 20px;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.social-icon{
+  fill-opacity: 0.3;
+}
+
+.social-btn:hover .social-icon{
+  fill-opacity: 0.6;
+}
+
+.social-btn:active .social-icon{
+  fill-opacity: 0.1;
 }
