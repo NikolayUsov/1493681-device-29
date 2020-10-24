@@ -28,6 +28,8 @@
   --basic-yellow: #F7E296;
   --special-yellow-dark: #F0C52E;
   --basic-grey: #E5E5E5;
+  --custom-font: 'Gilroy', Verdana, sans-serif;
+  --main-font: 'Open Sans', Arial, sans-serif;
 }
 
 /* Вспомогательные классы  */
@@ -106,6 +108,7 @@ img {
   width: 100%;
   padding: 9px 0;
 }
+
 .btn::before{
   content: "";
   display: block;
@@ -697,3 +700,111 @@ a:not([href^="http://"]):not([href^="https://"]) {
 .social-btn:active .social-icon{
   fill-opacity: 0.1;
 }
+
+
+/*catalog*/
+.catalog-main{ 
+  padding: 44px 0 78px 0;
+}
+
+.title-product-name{
+  font-family: var(--custom-font);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  color:var(--basic-black);
+}
+
+.breadcrumbs{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.breadcrumbs .breadcrumbs-item:not(:last-child){
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs .breadcrumbs-item:not(:last-child)::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 4px;
+  height: 4px;
+  border-top: 2px solid var(--basic-black);
+  border-right: 2px solid var(--basic-black);
+  transform: translateY(-50%) rotate(45deg);
+}
+ .breadcrumbs-link{
+    font-family: var(--main-font);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;  
+    color: var(--basic-black);
+    opacity: 0.3;
+ }
+
+ .breadcrumbs-link:hover{
+   opacity: 0.6;
+ }
+ 
+ .breadcrumbs-link:active{
+  opacity: 0.1;
+}
+
+.catalog{
+  display: grid;
+  grid-template-columns: 328px 1fr;
+  column-gap: 72px;
+}
+
+.sort-block{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subtitle-catalog-sort,
+.subtitle-filter-form{
+  margin:0;
+  font-family: var(--custom-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--basic-black)
+}
+
+.subtitle-catalog-sort{
+  margin-right: 74px;
+}
+.catalog-sort{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.catalog-sort-item:not(:last-child):not(:nth-last-child(2)){
+  margin-right: 30px;
+}
+
+.catalog-sort-item:nth-last-child(2){
+  margin: 0 16px 0 auto;
+}
+
+.catalog-sort-item a{
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+  
