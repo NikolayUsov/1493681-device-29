@@ -782,19 +782,43 @@ a:not([href^="http://"]):not([href^="https://"]) {
   opacity: 0.1;
 }
 
-.catalog {
+.filter-section{
+  background: linear-gradient(to right,
+  #DCDCDC 50% , #E5E5E5 50% 100%);
+}
+
+.filter-section .subtitle-filter-form{
+  z-index: 2;
+  position: relative;
+}
+.filter-section .subtitle-filter-form::before{
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: red;
+}
+
+.filter-section-grid {
   display: grid;
   grid-template-columns: 328px 1fr;
   column-gap: 72px;
 }
 
+.subtitle-filter-form,
+.filter-form{
+  padding: 0 68px 0 60px;
+}
+.filter-section .filter-section-grid{
+  grid-template-rows: minmax(70px, auto);
+  align-items: center;
+}
+
 .sort-block {
   display: flex;
   flex-wrap: wrap;
-}
-
-.filter-section {
-  padding-left: 60px;
 }
 
 /*Style of form*/
@@ -813,18 +837,17 @@ a:not([href^="http://"]):not([href^="https://"]) {
 fieldset {
   margin: 0;
   padding: 0;
-  padding-top: calc(1em + 30px);
-  padding-bottom: 25px;
+  padding-bottom: 40px;
   border: none;
-  border-top: 2px solid var(--basic-black);
-  position: relative;
 }
 
 legend {
-  position: absolute;
-  top: 1em;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  padding-top: 14px;
+  border-top: 2px solid var(--basic-black);
+  width: 100%;
   font-family: var(--basic-black);
   font-weight: 800;
   font-size: 14px;
