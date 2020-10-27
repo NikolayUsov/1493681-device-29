@@ -36,7 +36,7 @@
   --main-font: 'Open Sans', Arial, sans-serif;
   --special-range-color: #f1f1f1;
   --special-range-scale: #d7dcde;
-  --special-range-progress-color: #00ca74;
+  --special-range-progress-color: #91C92F;
   --special-range-toggle: #ababab;
   --special-range-toggle-shadow: #cfcfcf;
 
@@ -141,13 +141,12 @@ img {
   height: 100%;
 }
 
-.btn:active {
+.btn:active:not(.btn-switch) {
   color: var(--special-black-opacity-30);
 }
 
 a:not([href^="http://"]):not([href^="https://"]) {
   text-decoration: none;
-
 }
 
 /* header */
@@ -428,8 +427,90 @@ a:not([href^="http://"]):not([href^="https://"]) {
   margin: 0;
 }
 
+.services-section{
+  padding: 15px 0 68px 0;
+  background: linear-gradient(to bottom,
+              var(--basic-white) 22%,
+              var(--basic-grey) 22%);
+}
 
-/*services*/
+.switcher-services{
+  display: flex;
+}
+
+.switcher-controls-list{
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  list-style: none;
+  min-width: 277px;
+  margin-right: 116px;
+  border-right: 7px solid var(--basic-black);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.switcher-controls-item{
+  display: flex;
+  justify-content: stretch;
+  min-width: 160px;
+  margin-bottom: 30px;
+}
+.switcher-controls-item:last-child{
+  margin-bottom: 30px;
+}
+
+.switcher-controls-item .btn{
+  padding: 0 10px;
+  width: 100%;
+ }
+
+ .switcher-controls-item.current-switcher{
+   width: 100%;
+   color: var(--basic-yellow);
+   display: block;
+   background-color: var(--basic-black);
+ }
+
+.services-description-list{
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 61px;
+  margin: 0;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.services-description-item{
+  width: 100%;
+  position: relative;
+  display: none;
+}
+
+.services-description-item.current-service{
+  display: block;
+}
+.services-description-title {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black);
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.services-description-title+p {
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  margin: 0;
+  width: 500px;
+}
+
+/*services
 .services-section {
   background: linear-gradient(to bottom,
       var(--basic-white) 29%,
@@ -494,25 +575,8 @@ a:not([href^="http://"]):not([href^="https://"]) {
   background-image: url(../img/delivery.svg);
 }
 
-.services-describe-title {
-  font-family: 'Gilroy', Verdana, sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 47px;
-  line-height: 58px;
-  letter-spacing: 0.2em;
-  color: var(--basic-black);
-  margin: 0;
-  margin-bottom: 40px;
-}
 
-.services-describe-title+p {
-  line-height: 30px;
-  letter-spacing: 0.1em;
-  margin: 0;
-  width: 500px;
-}
-
+*/
 /*ourbrands*/
 .logo-our-brands {
   margin-bottom: 90px;
@@ -729,7 +793,11 @@ a:not([href^="http://"]):not([href^="https://"]) {
 
 /*catalog*/
 .catalog-main {
-  padding: 44px 0 78px 0;
+  padding: 44px 0 0 0;
+}
+
+.catalog-product-nav{
+  padding-bottom: 50px;
 }
 
 .title-product-name {
@@ -783,8 +851,7 @@ a:not([href^="http://"]):not([href^="https://"]) {
 }
 
 .filter-section{
-  background: linear-gradient(to right,
-  #DCDCDC 50% , #E5E5E5 50% 100%);
+  background-color:  #E5E5E5;
 }
 
 .filter-section .subtitle-filter-form{
@@ -798,22 +865,41 @@ a:not([href^="http://"]):not([href^="https://"]) {
   top: 0;
   height: 100%;
   width: 100vw;
-  background-color: red;
+  background-color: #DCDCDC;
+  z-index: -1;
 }
 
+.sort-block{
+  align-self: center;
+}
 .filter-section-grid {
   display: grid;
   grid-template-columns: 328px 1fr;
   column-gap: 72px;
 }
 
-.subtitle-filter-form,
-.filter-form{
-  padding: 0 68px 0 60px;
+.product-section{
+  padding-top: 70px;
 }
-.filter-section .filter-section-grid{
-  grid-template-rows: minmax(70px, auto);
-  align-items: center;
+
+.filter-form{
+  padding: 70px 68px 0 60px;
+  position: relative;
+}
+
+.filter-form::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: #E5E5E5;
+  z-index: -1;
+}
+
+.subtitle-filter-form{
+  padding: 25px 68px  25px 60px;
 }
 
 .sort-block {
@@ -848,7 +934,7 @@ legend {
   padding-top: 14px;
   border-top: 2px solid var(--basic-black);
   width: 100%;
-  font-family: var(--basic-black);
+  font-family: var(--custom-font);
   font-weight: 800;
   font-size: 14px;
   line-height: 17px;
@@ -893,10 +979,61 @@ legend {
   background-image: url(../img/chekbox.svg);
 }
 
+.filter-form-checkbox:hover+label::before{
+  opacity: 0.6;
+}
+
+.filter-form-checkbox:active+label::before{
+  opacity: 0.6;
+}
+.filter-form-checkbox:disabled+label::before{
+  opacity: 0.25;
+}
+
+.filter-form-radio+label::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -42px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--basic-black);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.filter-form-radio:checked+label::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -34px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--basic-black);
+}
+
 .subtitle-catalog-sort {
   margin-right: 74px;
 }
 
+.filter-form-radio:hover+label::before,
+.filter-form-radio:hover+label::after{
+  opacity: 0.6;
+}
+ 
+.filter-form-radio:active+label::before,
+.filter-form-radio:active+label::after{
+  opacity: 1;
+}
+
+.filter-form-radio:disabled+label::before,
+.filter-form-radio:disabled+label::after{
+  opacity: 0.25;
+}
 .catalog-sort {
   margin: 0;
   padding: 0;
@@ -930,6 +1067,7 @@ legend {
   display: grid;
   grid-template-columns: 360px 360px;
   gap: 48px 40px;
+  margin-bottom: 40px;
 }
 
 .product-logo {
@@ -1018,6 +1156,7 @@ legend {
   min-height: 70px;
   justify-content: space-between;
   background-color: var(--basic-grey-dark);
+  margin-bottom: 78px;
 }
 
 .pagination-number-of-page {
@@ -1081,7 +1220,7 @@ legend {
 .range-controls {
   position: relative;
   height: 41px;
-  background-color: var(--special-range-color);
+  background-color: transparent;
   border-radius: 5px;
   margin-bottom: 15px;
   padding-top: 39px;
@@ -1135,6 +1274,7 @@ legend {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
+  background-color: transparent;
 }
 
 .price-controls input {
