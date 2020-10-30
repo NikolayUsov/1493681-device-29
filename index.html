@@ -21,9 +21,9 @@
             <button class="search-btn" type="submit">Найти</button>
           </form>
           <ul class="user-nav">
-            <li class="user-nav-item"><a class="main-nav-link log-in" href="#">Войти</a></li>
-            <li class="user-nav-item"><a class="main-nav-link chart" href="#">Сравнить</a></li>
-            <li class="user-nav-item"><a a class="main-nav-link cart" href="#">Корзина</a></li>
+            <li class="user-nav-item"><a class="user-nav-link log-in" href="#">Войти</a></li>
+            <li class="user-nav-item"><a class="user-nav-link chart" href="#">Сравнить</a></li>
+            <li class="user-nav-item"><a a class="user-nav-link cart" href="#">Корзина</a></li>
           </ul>
         </div>
         <nav class="main-nav">
@@ -215,16 +215,16 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d140.56951657324208!2d37.52958321328113!3d55.687035913109234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1603114343531!5m2!1sru!2sru"
           width="560" height="222" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <a href="#" class="btn">напишите нам</a>
+        <a href="#" class="btn open-modal-btn">напишите нам</a>
       </article>
     </section>
   </main>
   <footer class="main-footer">
     <div class="wrapper">
       <ul class="footer-user-nav">
-        <li class="footer-user-nav-item"><a class="log-in" href="#">Войти</a></li>
-        <li class="footer-user-nav-item"><a class="compare" href="#">Сравнить</a></li>
-        <li class="footer-user-nav-item"><a a class="cart" href="#">Корзина</a></li>
+        <li class="footer-user-nav-item"><a class="footer-user-nav-link log-in" href="#">Войти</a></li>
+        <li class="footer-user-nav-item"><a class="footer-user-nav-link chart" href="#">Сравнить</a></li>
+        <li class="footer-user-nav-item"><a a class="footer-user-nav-link cart" href="#">Корзина</a></li>
       </ul>
       <a href="#" class="footer-logo">
         <img src="img/footer-logo.png" width="163" height="35" alt="Желтый логотип Device">
@@ -295,6 +295,28 @@
 
     </div>
   </footer>
+  <section class="modal">
+    <h2 class="modal-title visually-hidden">Напишите нам</h2>
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="double-form-group">
+        <div class="form-group">
+          <label class="modal-label" for="name">Ваше имя</label>
+          <input class="modal-name-input" id="name" type="text" name="login" placeholder="Имя Фамилия">  
+        </div>
+        <div class="form-group">
+          <label class="modal-label" for="email">Ваш e-mail</label>
+          <input class="modal-email" id="email" type="email" name="login" placeholder="email@example.com">  
+        </div>
+      </div>
+      <div class="form-group textarea-group">
+        <label class="modal-label" for="message">Текст письма:</label>
+        <textarea class="modal-text-area" id="message" name="message" placeholder="В свободной форме"></textarea>  
+      </div>
+        <button class="btn btn-primary" type="submit">Отправить</button>
+    </form>
+    <button type="button" class="close-btn" aria-label="close"><span class="visually-hidden">Закрыть</span></button>
+  </section>  
+  <script src="js/script.js"></script>
 </body>
 
 </html>

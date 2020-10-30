@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
@@ -8,23 +7,22 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body class="page-body">
   <div class="wrapper">
     <header class="main-header">
       <div class="wrapper-1040">
         <h1 class="visually-hidden">Интернет магазин Device</h1>
-        <a class="logo" href="index.html"><img src="img/logo-device.png" width="163" height="35"
-            alt="Логотип Device"></a>
+        <a href="index.html" class="logo"><img src="img/logo-device.png" width="163" height="35" alt="Логотип Device"></a>
         <div class="top-nav double-column">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <input class="search-input" type="search" placeholder="Поиск по сайту">
-            <button type="submit">Найти</button>
+            <button class="search-btn" type="submit">Найти</button>
           </form>
           <ul class="user-nav">
-            <li class="user-nav-item"><a class="log-in" href="#">Войти</a></li>
-            <li class="user-nav-item"><a class="compare" href="#">Сравнить</a></li>
-            <li class="user-nav-item"><a a class="cart" href="#">Корзина</a></li>
+            <li class="user-nav-item"><a class="user-nav-link log-in" href="#">Валентин Петухов</a></li>
+            <li class="user-nav-item"><a class="user-nav-link " href="#">Выйти</a></li>
+            <li class="user-nav-item"><a class="user-nav-link chart" href="#">Сравнить</a></li>
+            <li class="user-nav-item"><a a class="user-nav-link cart" href="#">Корзина</a></li>
           </ul>
         </div>
         <nav class="main-nav">
@@ -177,7 +175,7 @@
                         <img src="img/monopod-1.jpg" width="360" height="380" alt="карточка товара Монопод">
                         <div class="product-logo-buttons">
                           <a href="#" class="btn">В корзину</a>
-                          <button type="button" class="add-to-campre">Добавить к сравнению</button>
+                          <a href="#" class="add-to-campre">Добавить к сравнению</a>
                         </div>
                       </div>
                       <div class="product-info">
@@ -190,7 +188,7 @@
                         <img src="img/monopod-2.png" width="360" height="380" alt="карточка товара Монопод">
                         <div class="product-logo-buttons">
                           <a href="#" class="btn">В корзину</a>
-                          <button type="button" class="add-to-campre">Добавить к сравнению</button>
+                          <a href="#" class="add-to-campre">Добавить к сравнению</a>
                         </div>
                       </div>
                       <div class="product-info">
@@ -204,7 +202,7 @@
                         <img src="img/monopod-3.png" width="360" height="380" alt="карточка товара Монопод">
                         <div class="product-logo-buttons">
                           <a href="#" class="btn">В корзину</a>
-                          <button type="button" class="add-to-campre">Добавить к сравнению</button>
+                          <a href="#" class="add-to-campre">Добавить к сравнению</a>
                         </div>
                       </div>
                       <div class="product-info">
@@ -212,12 +210,12 @@
                         <span class="price">1500</span>
                       </div>
                     </li>
-                    <li class="product-items" tabindex="0">
+                    <li class="product-items new" tabindex="0">
                       <div class="product-logo">
                         <img src="img/monopod-4.png" width="360" height="380" alt="карточка товара Монопод">
                         <div class="product-logo-buttons">
                           <a href="#" class="btn">В корзину</a>
-                          <button type="button" class="add-to-campre">Добавить к сравнению</button>
+                          <a  href="#" class="add-to-campre">Добавить к сравнению</a>
                         </div>
                       </div>
                       <div class="product-info">
@@ -241,12 +239,14 @@
         </div>
     </section>
   </main>
+  
   <footer class="main-footer">
     <div class="wrapper">
       <ul class="footer-user-nav">
-        <li class="footer-user-nav-item"><a class="log-in" href="#">Войти</a></li>
-        <li class="footer-user-nav-item"><a class="compare" href="#">Сравнить</a></li>
-        <li class="footer-user-nav-item"><a a class="cart" href="#">Корзина</a></li>
+        <li class="footer-user-nav-item"><a class="footer-user-nav-link log-in" href="#">Валентин Петухов</a></li>
+        <li class="footer-user-nav-item"><a class="footer-user-nav-link" href="#">Выйти</a></li>
+        <li class="footer-user-nav-item"><a class="footer-user-nav-link chart" href="#">Сравнить</a></li>
+        <li class="footer-user-nav-item"><a a class="footer-user-nav-link cart" href="#">Корзина</a></li>
       </ul>
       <a href="#" class="footer-logo">
         <img src="img/footer-logo.png" width="163" height="35" alt="Желтый логотип Device">
